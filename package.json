@@ -1,11 +1,12 @@
 {
   "name": "vue3-drag-echart",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "push": "bash bash-push.sh"
   },
   "dependencies": {
     "core-js": "^3.6.5",
