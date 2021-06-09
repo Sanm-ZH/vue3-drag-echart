@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "push": "bash bash-push.sh"
+    "push": "bash bash-push.sh",
+    "deploy": "bash bash-deploy.sh"
   },
   "dependencies": {
     "core-js": "^3.6.5",
