@@ -1,7 +1,4 @@
-# vue3-drag-echart
-
-## Describe
-一个支持拖拽排版、自定义的echart Demo
+# vue3-drag-echarts
 
 ## Project setup
 ```
@@ -22,3 +19,6 @@ pnpm run build
 ```
 pnpm run lint
 ```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
