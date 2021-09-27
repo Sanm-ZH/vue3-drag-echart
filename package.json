@@ -1,7 +1,7 @@
 {
-  "name": "vue3-drag-echarts",
+  "name": "vue3-drag-echart",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "echarts": "^5.2.1",
+    "element-plus": "^1.1.0-beta.17",
+    "mockjs": "^1.1.0",
+    "unplugin-vue-components": "^0.15.4",
     "vue": "^3.0.0"
   },
   "devDependencies": {

@@ -1,3 +1,7 @@
 module.exports = {
-  lintOnSave: true
+  configureWebpack: {
+    plugins: [
+      require('unplugin-vue-components/webpack')({ /* options */ })
+    ]
+  }
 }
