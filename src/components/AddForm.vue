@@ -7,11 +7,13 @@
         </el-select>
         <span class="form-desc">（示例图仅供参考）</span>
       </el-form-item>
-      <el-form-item class="chart-type-cont" v-if="chartTypeChilds.length" label-width="0">
-        <img v-for="item in chartTypeChilds" :key="item.type" :src="item.imgSrc" :class="{ active: item.type === ruleForm.choseType }" @click="handleChoseChartTypeClick(item.type)" />
+      <el-form-item prop="choseType" v-if="chartTypeChilds.length" label-width="0">
+        <div class="chart-type-cont">
+          <img v-for="item in chartTypeChilds" :key="item.type" :src="item.imgSrc" :class="{ active: item.type === ruleForm.choseType }" @click="handleChoseChartTypeClick(item.type)" />
+        </div>
       </el-form-item>
       <el-form-item label="图表名称：" prop="title" required>
-        <el-input v-model="ruleForm.title" placeholder="请输入图表名称（10字以内）" class="width220"></el-input>
+        <el-input v-model="ruleForm.title" placeholder="请输入图表名称（10字以内）" clearable class="width220"></el-input>
       </el-form-item>
       <span class="form-subtitle">图表样式</span>
       <el-row>
@@ -87,10 +89,39 @@ export default defineComponent({
           message: '图表名称应该3个字到10个字',
           trigger: 'blur'
         }
+      ],
+      chartType: [
+        {
+          required: true,
+          message: '图表类型不能为空',
+          trigger: 'change'
+        }
+      ],
+      choseType: [
+        {
+          required: true,
+          message: '两种类型必选一种',
+          trigger: 'change'
+        }
+      ],
+      heigth: [
+        {
+          required: true,
+          message: '图表卡片宽度不能为空',
+          trigger: 'change'
+        }
+      ],
+      width: [
+        {
+          required: true,
+          message: '图表卡片高度不能为空',
+          trigger: 'change'
+        }
       ]
     }
     const handleChartTypeChange = type => {
       const temp = chartTypes.filter(item => item.value === type)
+      state.ruleForm.choseType = ''
       if (temp.length) {
         state.chartTypeChilds = temp[0].chartType
       } else {
@@ -103,7 +134,13 @@ export default defineComponent({
     }
 
     const handleConfirmClick = () => {
-
+      formRef.value.validate(valid => {
+        if (valid) {
+          emit('parentListener', { type: 'confirm', msg: '确定' })
+        } else {
+          return false
+        }
+      })
     }
 
     const handleCancelClick = () => {
