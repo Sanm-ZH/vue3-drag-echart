@@ -8,34 +8,37 @@
         </div>
         <div class="head-cen"></div>
         <div class="head-right">
-          <el-button type="primary" size="small" :disabled="editBStatus" icon="el-icon-edit" @click="handleEditClick">编辑</el-button>
+          <el-button type="primary" plain size="small" :disabled="editBStatus" icon="el-icon-edit" @click="handleEditClick">编辑</el-button>
           <el-button type="primary" size="small" :disabled="confirmBStatus" icon="el-icon-check" @click="handleConfirmClick">确定</el-button>
           <el-button type="primary" size="small" :disabled="addBStatus" icon="el-icon-plus" @click="handleAddClick">增加</el-button>
         </div>
       </div>
+      <div class="main-cont">
+
+      </div>
     </div>
   </transition>
-  <el-dialog v-model="addDialogFormVisible" title="新增" center :show-close=false :close-on-click-modal=false>
-    <template #footer>
-      <span class="dialog-footer">
-        <el-button size="small" @click="addDialogFormVisible = false" class="width80">取消</el-button>
-        <el-button type="primary" size="small" @click="addDialogFormVisible = false" class="width80">确定</el-button>
-      </span>
-    </template>
+  <el-dialog v-model="addDialogFormVisible" title="新增图表" :show-close=false custom-class="self-dialog" :close-on-click-modal=false width="550px">
+    <AddForm @parentListener="addFormListenHandle" />
   </el-dialog>
 </template>
 
 <script>
 import { ref, toRefs, reactive, defineComponent } from 'vue'
+import AddForm from '@/components/AddForm.vue'
+
 export default defineComponent({
+  components: {
+    AddForm
+  },
   props: {
     msg: String
   },
   setup () {
     const titleShow = ref(true)
-    setTimeout(() => {
-      titleShow.value = false
-    }, 2300)
+    // setTimeout(() => {
+    titleShow.value = false
+    // }, 2300)
 
     const state = reactive({
       editBStatus: false,
@@ -56,10 +59,12 @@ export default defineComponent({
     }
 
     const handleAddClick = () => {
-      addDialogInit()
-    }
-    const addDialogInit = () => {
       state.addDialogFormVisible = true
+    }
+    const addFormListenHandle = ({ type }) => {
+      if (type === 'cancel') {
+        state.addDialogFormVisible = false
+      }
     }
 
     return {
@@ -67,7 +72,8 @@ export default defineComponent({
       ...toRefs(state),
       handleEditClick,
       handleConfirmClick,
-      handleAddClick
+      handleAddClick,
+      addFormListenHandle
     }
   }
 })
@@ -104,5 +110,7 @@ export default defineComponent({
   align-items: center;
   justify-content: space-between;
   padding: 10px 15px;
+  position: sticky;
+  top: 0;
 }
 </style>

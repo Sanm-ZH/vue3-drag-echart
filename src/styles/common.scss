@@ -4,6 +4,25 @@ body {
   margin: 0;
 }
 
+.self-dialog .el-dialog__footer {
+  text-align: center;
+}
+.form-subtitle {
+  display: flex;
+  min-height: 30px;
+  align-items: center;
+  font-size: 16px;
+  color: #303133;
+  margin-bottom: 15px;
+}
+.form-subtitle::before {
+  content: "";
+  background-color: #409eff;
+  margin-right: 5px;
+  width: 3px;
+  height: 16px;
+}
+
 .font-blod {
   font-weight: bold;
 }
@@ -20,4 +39,7 @@ body {
 }
 .width120 {
   width: 120px;
+}
+.width220 {
+  width: 220px;
 }
