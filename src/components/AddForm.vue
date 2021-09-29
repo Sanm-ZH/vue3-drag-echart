@@ -2,10 +2,13 @@
   <div class="form-cont">
     <el-form ref="formRef" :model="ruleForm" :rules="rules" label-width="120px" class="demo-ruleForm" size="small" align="left">
       <el-form-item label="图表类型：" prop="chartType" required>
-        <el-select v-model="ruleForm.chartType" placeholder="请选择图表类型" class="width220">
-          <el-option v-for="item of chartTypes" :key="item.value" :label="item.label" value="item.value"></el-option>
+        <el-select v-model="ruleForm.chartType" placeholder="请选择图表类型" class="width220" @change="handleChartTypeChange">
+          <el-option v-for="item in chartTypes" :key="item.value" :label="item.label" :value="item.value"></el-option>
         </el-select>
         <span class="form-desc">（示例图仅供参考）</span>
+      </el-form-item>
+      <el-form-item class="chart-type-cont" v-if="chartTypeChilds.length" label-width="0">
+        <img v-for="item in chartTypeChilds" :key="item.type" :src="item.imgSrc" :class="{ active: item.type === ruleForm.choseType }" @click="handleChoseChartTypeClick(item.type)" />
       </el-form-item>
       <el-form-item label="图表名称：" prop="title" required>
         <el-input v-model="ruleForm.title" placeholder="请输入图表名称（10字以内）" class="width220"></el-input>
@@ -15,7 +18,7 @@
         <el-col :span="11">
           <el-form-item label="宽：" label-width="40" prop="width" required>
             <el-select v-model="ruleForm.width" placeholder="请选择图表卡片宽度">
-              <el-option v-for="item of chartPWs" :key="item.value" :label="item.label" :value="item.value">
+              <el-option v-for="item in chartPWs" :key="item.value" :label="item.label" :value="item.value">
                 <span style="float: left">{{ item.label }}</span>
                 <span style="float: right;color: var(--el-text-color-secondary);font-size: 13px;">
                   {{ item.value }}
@@ -28,7 +31,7 @@
         <el-col :span="11">
           <el-form-item label="高：" label-width="40" prop="heigth" required>
             <el-select v-model="ruleForm.heigth" placeholder="请选择图表卡片高度">
-              <el-option v-for="item of chartPHs" :key="item.value" :label="item.label" :value="item.value">
+              <el-option v-for="item in chartPHs" :key="item.value" :label="item.label" :value="item.value">
                 <span style="float: left">{{ item.label }}</span>
                 <span style="float: right;color: var(--el-text-color-secondary);font-size: 13px;">
                   {{ item.value }}
@@ -49,7 +52,6 @@
 <script>
 import { ref, reactive, toRefs, defineComponent } from 'vue'
 import { chartTypes, chartPWs, chartPHs } from '@/utils/dict.js'
-console.log(chartTypes)
 
 export default defineComponent({
   props: {
@@ -63,10 +65,12 @@ export default defineComponent({
       ruleForm: {
         title: '',
         chartType: '',
+        choseType: '',
         heigth: '',
         width: '',
         desc: ''
-      }
+      },
+      chartTypeChilds: []
     })
 
     const formRef = ref(null)
@@ -85,6 +89,18 @@ export default defineComponent({
         }
       ]
     }
+    const handleChartTypeChange = type => {
+      const temp = chartTypes.filter(item => item.value === type)
+      if (temp.length) {
+        state.chartTypeChilds = temp[0].chartType
+      } else {
+        state.chartTypeChilds = []
+      }
+    }
+
+    const handleChoseChartTypeClick = type => {
+      state.ruleForm.choseType = type
+    }
 
     const handleConfirmClick = () => {
 
@@ -97,6 +113,8 @@ export default defineComponent({
       ...toRefs(state),
       formRef,
       rules,
+      handleChartTypeChange,
+      handleChoseChartTypeClick,
       handleConfirmClick,
       handleCancelClick
     }
@@ -113,5 +131,23 @@ export default defineComponent({
 .form-desc {
   font-size: 14px;
   color: #b5b5b5;
+}
+
+.chart-type-cont img {
+  width: 250px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+.chart-type-cont img:hover {
+  border-color: #409eff;
+}
+.active {
+  border-color: #409eff !important;
+}
+.chart-type-cont img:last-child {
+  margin-left: 10px;
 }
 </style>

@@ -10,7 +10,7 @@
         <div class="head-right">
           <el-button type="primary" plain size="small" :disabled="editBStatus" icon="el-icon-edit" @click="handleEditClick">编辑</el-button>
           <el-button type="primary" size="small" :disabled="confirmBStatus" icon="el-icon-check" @click="handleConfirmClick">确定</el-button>
-          <el-button type="primary" size="small" :disabled="addBStatus" icon="el-icon-plus" @click="handleAddClick">增加</el-button>
+          <el-button type="primary" size="small" :disabled="addBStatus" icon="el-icon-plus" @click="handleAddClick">新增</el-button>
         </div>
       </div>
       <div class="main-cont">

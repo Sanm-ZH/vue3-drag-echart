@@ -1,14 +1,21 @@
+import singleLine from '../assets/singleLine.png'
+import doubleLine from '../assets/doubleLine.png'
+import areaPie from '../assets/areaPie.png'
+import circlePie from '../assets/circlePie.png'
+import rowBar from '../assets/rowBar.png'
+import columnBar from '../assets/columnBar.png'
+
 const chartTypes = [
   {
     value: 'line',
     label: '折线图',
     chartType: [
       {
-        imgSrc: '',
+        imgSrc: singleLine,
         type: 'singleLine'
       },
       {
-        imgSrc: '',
+        imgSrc: doubleLine,
         type: 'doubleLine'
       }
     ]
@@ -18,11 +25,11 @@ const chartTypes = [
     label: '饼图',
     chartType: [
       {
-        imgSrc: '',
+        imgSrc: areaPie,
         type: 'areaPie'
       },
       {
-        imgSrc: '',
+        imgSrc: circlePie,
         type: 'circlePie'
       }
     ]
@@ -32,11 +39,11 @@ const chartTypes = [
     label: '柱状图',
     chartType: [
       {
-        imgSrc: '',
+        imgSrc: rowBar,
         type: 'rowBar'
       },
       {
-        imgSrc: '',
+        imgSrc: columnBar,
         type: 'columnBar'
       }
     ]
