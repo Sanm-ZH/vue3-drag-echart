@@ -80,8 +80,82 @@ const chartPHs = [
   }
 ]
 
+const singleLineColor = [
+  {
+    color: '#EB3841'
+  }, {
+    color: '#FEB4B4'
+  }
+]
+const doubleLineColor = [
+  {
+    color: '#EB3841'
+  }, {
+    color: '#6086FF'
+  }
+]
+const rowBarColor = [
+  {
+    color: '#6086FF'
+  }, {
+    color: '#98D1FF'
+  }, {
+    color: '#FEA145'
+  }, {
+    color: '#FB764A'
+  }
+]
+const columnBarColor = [
+  {
+    color: 'rgba(152,209,255,0.2)',
+    showalpha: true
+  }, {
+    color: '#83bff6'
+  }, {
+    color: '#188df0'
+  }, {
+    color: '#188df0'
+  }
+]
+const areaPieColor = [
+  {
+    color: '#67A8FF'
+  }, {
+    color: '#D0F6FF'
+  }, {
+    color: '#FFE059'
+  }, {
+    color: '#FB764A'
+  }
+]
+const circlePieColor = [
+  {
+    color: '#EB3841'
+  }, {
+    color: '#FB764A'
+  }, {
+    color: '#FEA145'
+  }, {
+    color: '#FFE059'
+  }, {
+    color: '#D0F6FF'
+  }, {
+    color: '#98D1FF'
+  }, {
+    color: '#67A8FF'
+  }, {
+    color: '#6086FF'
+  }
+]
+
 export {
   chartTypes,
   chartPWs,
-  chartPHs
+  chartPHs,
+  singleLineColor,
+  doubleLineColor,
+  rowBarColor,
+  columnBarColor,
+  areaPieColor,
+  circlePieColor
 }

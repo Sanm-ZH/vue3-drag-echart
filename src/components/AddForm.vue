@@ -16,6 +16,9 @@
         <el-input v-model="ruleForm.title" placeholder="请输入图表名称（10字以内）" clearable class="width220"></el-input>
       </el-form-item>
       <span class="form-subtitle">图表样式</span>
+      <el-form-item label="图表配色：" required v-if="ruleForm.choseType" label-width="60">
+        <ChartColorStyle :choseType="ruleForm.choseType" :chartType="ruleForm.chartType" @colorChange="handleColorChange" />
+      </el-form-item>
       <el-row>
         <el-col :span="11">
           <el-form-item label="宽：" label-width="40" prop="width" required>
@@ -53,11 +56,12 @@
 
 <script>
 import { ref, reactive, toRefs, defineComponent } from 'vue'
+import ChartColorStyle from './ChartColorStyle'
 import { chartTypes, chartPWs, chartPHs } from '@/utils/dict.js'
 
 export default defineComponent({
-  props: {
-
+  components: {
+    ChartColorStyle
   },
   setup (props, { emit }) {
     const state = reactive({
@@ -68,6 +72,7 @@ export default defineComponent({
         title: '',
         chartType: '',
         choseType: '',
+        colorList: [],
         heigth: '',
         width: '',
         desc: ''
@@ -81,7 +86,7 @@ export default defineComponent({
         {
           required: true,
           message: '图表名称不能为空',
-          trigger: 'blur'
+          trigger: ['blur', 'change']
         },
         {
           min: 3,
@@ -122,6 +127,7 @@ export default defineComponent({
     const handleChartTypeChange = type => {
       const temp = chartTypes.filter(item => item.value === type)
       state.ruleForm.choseType = ''
+      state.ruleForm.colorList = []
       if (temp.length) {
         state.chartTypeChilds = temp[0].chartType
       } else {
@@ -131,6 +137,10 @@ export default defineComponent({
 
     const handleChoseChartTypeClick = type => {
       state.ruleForm.choseType = type
+    }
+
+    const handleColorChange = colors => {
+      state.colorList = colors
     }
 
     const handleConfirmClick = () => {
@@ -152,6 +162,7 @@ export default defineComponent({
       rules,
       handleChartTypeChange,
       handleChoseChartTypeClick,
+      handleColorChange,
       handleConfirmClick,
       handleCancelClick
     }
