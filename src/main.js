@@ -4,6 +4,7 @@ import '@/styles/common.scss'
 // import { ElInput, ElButton, ElDialog, ElCard, ElForm, ElFormItem } from 'element-plus'
 import ElementPlus from 'element-plus'
 import App from './App.vue'
+require('./mock')
 
 const app = createApp(App)
 app.use(ElementPlus)

@@ -9,7 +9,7 @@ var getFirstChartInfo = [{
   chartType: 'line',
   chartTit: '证券类产品净值',
   chartDetailType: 'singleLine',
-  text: 1,
+  sort: 1,
   chartColor: ['#EB3841', '#FEB4B4'],
   xData: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
   seriesData: [{
@@ -18,7 +18,7 @@ var getFirstChartInfo = [{
 },
 {
   chartClass: 'h20 w49 chartMain2',
-  text: 2,
+  sort: 2,
   chartDetailType: 'doubleLine',
   chartTit: '证券类产品净值',
   chartType: 'line',
@@ -37,7 +37,7 @@ var getFirstChartInfo = [{
 },
 {
   chartClass: 'h15 w24 chartMain3',
-  text: 3,
+  sort: 3,
   chartDetailType: 'singleLine',
   chartTit: '证券类产品净值',
   chartType: 'line',
@@ -50,7 +50,7 @@ var getFirstChartInfo = [{
 },
 {
   chartClass: 'h15 w24 chartMain4',
-  text: 4,
+  sort: 4,
   chartDetailType: 'circlePie',
   chartTit: '产品投资者人数',
   chartType: 'pie',
@@ -77,7 +77,7 @@ var getFirstChartInfo = [{
 },
 {
   chartClass: 'h15 w24 chartMain5',
-  text: 5,
+  sort: 5,
   chartDetailType: 'areaPie',
   chartTit: '产品投资者人数',
   chartType: 'pie',
@@ -109,7 +109,7 @@ var getFirstChartInfo = [{
 },
 {
   chartClass: 'h15 w24 chartMain6',
-  text: 6,
+  sort: 6,
   chartDetailType: 'rowBar',
   chartTit: '盈亏能力展示',
   chartColor: ['#6086FF', '#98D1FF', '#FEA145', '#FB764A'],
@@ -122,7 +122,7 @@ var getFirstChartInfo = [{
 },
 {
   chartClass: 'h15 w24 chartMain7',
-  text: 7,
+  sort: 7,
   chartDetailType: 'columnBar',
   chartTit: '持有期限',
   chartType: 'bar',

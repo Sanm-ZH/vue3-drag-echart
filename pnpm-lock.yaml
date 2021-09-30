@@ -6,6 +6,7 @@ specifiers:
   '@vue/cli-service': ~4.5.0
   '@vue/compiler-sfc': ^3.0.0
   '@vue/eslint-config-standard': ^5.1.2
+  axios: ^0.21.4
   babel-eslint: ^10.1.0
   core-js: ^3.6.5
   echarts: ^5.2.1
@@ -21,14 +22,17 @@ specifiers:
   sass-loader: ^8.0.2
   unplugin-vue-components: ^0.15.4
   vue: ^3.0.0
+  vuedraggable: ^4.1.0
 
 dependencies:
+  axios: registry.nlark.com/axios/0.21.4
   core-js: registry.npmmirror.com/core-js/3.18.1
   echarts: registry.nlark.com/echarts/5.2.1
   element-plus: registry.npmmirror.com/element-plus/1.1.0-beta.17_vue@3.2.19
   mockjs: registry.nlark.com/mockjs/1.1.0
   unplugin-vue-components: registry.npmmirror.com/unplugin-vue-components/0.15.4_vue@3.2.19
   vue: registry.npmmirror.com/vue/3.2.19
+  vuedraggable: registry.nlark.com/vuedraggable/4.1.0_vue@3.2.19
 
 devDependencies:
   '@vue/cli-plugin-babel': registry.nlark.com/@vue/cli-plugin-babel/4.5.13_dfd957c7912cc59e9811c9d4125adfb0
@@ -335,6 +339,8 @@ packages:
       '@babel/helper-optimise-call-expression': registry.nlark.com/@babel/helper-optimise-call-expression/7.15.4
       '@babel/helper-replace-supers': registry.nlark.com/@babel/helper-replace-supers/7.15.4
       '@babel/helper-split-export-declaration': registry.nlark.com/@babel/helper-split-export-declaration/7.15.4
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/@babel/helper-create-regexp-features-plugin/7.14.5_@babel+core@7.15.5:
@@ -442,6 +448,8 @@ packages:
       '@babel/template': registry.nlark.com/@babel/template/7.15.4
       '@babel/traverse': registry.nlark.com/@babel/traverse/7.15.4
       '@babel/types': registry.nlark.com/@babel/types/7.15.6
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/@babel/helper-optimise-call-expression/7.15.4:
@@ -481,6 +489,8 @@ packages:
       '@babel/helper-optimise-call-expression': registry.nlark.com/@babel/helper-optimise-call-expression/7.15.4
       '@babel/traverse': registry.nlark.com/@babel/traverse/7.15.4
       '@babel/types': registry.nlark.com/@babel/types/7.15.6
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/@babel/helper-simple-access/7.15.4:
@@ -545,6 +555,8 @@ packages:
       '@babel/template': registry.nlark.com/@babel/template/7.15.4
       '@babel/traverse': registry.nlark.com/@babel/traverse/7.15.4
       '@babel/types': registry.nlark.com/@babel/types/7.15.6
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/@babel/highlight/7.14.5:
@@ -607,6 +619,8 @@ packages:
       '@babel/core': registry.nlark.com/@babel/core/7.15.5
       '@babel/helper-create-class-features-plugin': registry.nlark.com/@babel/helper-create-class-features-plugin/7.15.4_@babel+core@7.15.5
       '@babel/helper-plugin-utils': registry.nlark.com/@babel/helper-plugin-utils/7.14.5
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/@babel/plugin-proposal-class-static-block/7.15.4_@babel+core@7.15.5:
@@ -622,6 +636,8 @@ packages:
       '@babel/helper-create-class-features-plugin': registry.nlark.com/@babel/helper-create-class-features-plugin/7.15.4_@babel+core@7.15.5
       '@babel/helper-plugin-utils': registry.nlark.com/@babel/helper-plugin-utils/7.14.5
       '@babel/plugin-syntax-class-static-block': registry.nlark.com/@babel/plugin-syntax-class-static-block/7.14.5_@babel+core@7.15.5
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/@babel/plugin-proposal-decorators/7.15.4_@babel+core@7.15.5:
@@ -637,6 +653,8 @@ packages:
       '@babel/helper-create-class-features-plugin': registry.nlark.com/@babel/helper-create-class-features-plugin/7.15.4_@babel+core@7.15.5
       '@babel/helper-plugin-utils': registry.nlark.com/@babel/helper-plugin-utils/7.14.5
       '@babel/plugin-syntax-decorators': registry.nlark.com/@babel/plugin-syntax-decorators/7.14.5_@babel+core@7.15.5
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/@babel/plugin-proposal-dynamic-import/7.14.5_@babel+core@7.15.5:
@@ -781,6 +799,8 @@ packages:
       '@babel/core': registry.nlark.com/@babel/core/7.15.5
       '@babel/helper-create-class-features-plugin': registry.nlark.com/@babel/helper-create-class-features-plugin/7.15.4_@babel+core@7.15.5
       '@babel/helper-plugin-utils': registry.nlark.com/@babel/helper-plugin-utils/7.14.5
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/@babel/plugin-proposal-private-property-in-object/7.15.4_@babel+core@7.15.5:
@@ -797,6 +817,8 @@ packages:
       '@babel/helper-create-class-features-plugin': registry.nlark.com/@babel/helper-create-class-features-plugin/7.15.4_@babel+core@7.15.5
       '@babel/helper-plugin-utils': registry.nlark.com/@babel/helper-plugin-utils/7.14.5
       '@babel/plugin-syntax-private-property-in-object': registry.nlark.com/@babel/plugin-syntax-private-property-in-object/7.14.5_@babel+core@7.15.5
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/@babel/plugin-proposal-unicode-property-regex/7.14.5_@babel+core@7.15.5:
@@ -1081,6 +1103,8 @@ packages:
       '@babel/helper-replace-supers': registry.nlark.com/@babel/helper-replace-supers/7.15.4
       '@babel/helper-split-export-declaration': registry.nlark.com/@babel/helper-split-export-declaration/7.15.4
       globals: registry.nlark.com/globals/11.12.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/@babel/plugin-transform-computed-properties/7.14.5_@babel+core@7.15.5:
@@ -1216,6 +1240,8 @@ packages:
       '@babel/helper-module-transforms': registry.nlark.com/@babel/helper-module-transforms/7.15.7
       '@babel/helper-plugin-utils': registry.nlark.com/@babel/helper-plugin-utils/7.14.5
       babel-plugin-dynamic-import-node: registry.nlark.com/babel-plugin-dynamic-import-node/2.3.3
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/@babel/plugin-transform-modules-commonjs/7.15.4_@babel+core@7.15.5:
@@ -1232,6 +1258,8 @@ packages:
       '@babel/helper-plugin-utils': registry.nlark.com/@babel/helper-plugin-utils/7.14.5
       '@babel/helper-simple-access': registry.nlark.com/@babel/helper-simple-access/7.15.4
       babel-plugin-dynamic-import-node: registry.nlark.com/babel-plugin-dynamic-import-node/2.3.3
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/@babel/plugin-transform-modules-systemjs/7.15.4_@babel+core@7.15.5:
@@ -1249,6 +1277,8 @@ packages:
       '@babel/helper-plugin-utils': registry.nlark.com/@babel/helper-plugin-utils/7.14.5
       '@babel/helper-validator-identifier': registry.nlark.com/@babel/helper-validator-identifier/7.15.7
       babel-plugin-dynamic-import-node: registry.nlark.com/babel-plugin-dynamic-import-node/2.3.3
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/@babel/plugin-transform-modules-umd/7.14.5_@babel+core@7.15.5:
@@ -1263,6 +1293,8 @@ packages:
       '@babel/core': registry.nlark.com/@babel/core/7.15.5
       '@babel/helper-module-transforms': registry.nlark.com/@babel/helper-module-transforms/7.15.7
       '@babel/helper-plugin-utils': registry.nlark.com/@babel/helper-plugin-utils/7.14.5
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/@babel/plugin-transform-named-capturing-groups-regex/7.14.9_@babel+core@7.15.5:
@@ -1303,6 +1335,8 @@ packages:
       '@babel/core': registry.nlark.com/@babel/core/7.15.5
       '@babel/helper-plugin-utils': registry.nlark.com/@babel/helper-plugin-utils/7.14.5
       '@babel/helper-replace-supers': registry.nlark.com/@babel/helper-replace-supers/7.15.4
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   registry.nlark.com/@babel/plugin-transform-parameters/7.15.4_@babel+core@7.15.5:
@@ -1913,9 +1947,8 @@ packages:
       source-map: registry.nlark.com/source-map/0.6.1
     dev: true
 
-  registry.nlark.com/@types/webpack-dev-server/3.11.6_debug@4.3.2:
+  registry.nlark.com/@types/webpack-dev-server/3.11.6:
     resolution: {integrity: sha1-2IiM/S8GMCA+E9PteDOk0RuKNNw=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/@types/webpack-dev-server/download/@types/webpack-dev-server-3.11.6.tgz}
-    id: registry.nlark.com/@types/webpack-dev-server/3.11.6
     name: '@types/webpack-dev-server'
     version: 3.11.6
     dependencies:
@@ -1923,9 +1956,7 @@ packages:
       '@types/express': registry.nlark.com/@types/express/4.17.13
       '@types/serve-static': registry.nlark.com/@types/serve-static/1.13.10
       '@types/webpack': registry.nlark.com/@types/webpack/4.41.31
-      http-proxy-middleware: registry.nlark.com/http-proxy-middleware/1.3.1_debug@4.3.2
-    transitivePeerDependencies:
-      - debug
+      http-proxy-middleware: registry.nlark.com/http-proxy-middleware/1.3.1
     dev: true
 
   registry.nlark.com/@types/webpack-sources/3.2.0:
@@ -2228,7 +2259,7 @@ packages:
       '@soda/get-current-script': registry.nlark.com/@soda/get-current-script/1.0.2
       '@types/minimist': registry.nlark.com/@types/minimist/1.2.2
       '@types/webpack': registry.nlark.com/@types/webpack/4.41.31
-      '@types/webpack-dev-server': registry.nlark.com/@types/webpack-dev-server/3.11.6_debug@4.3.2
+      '@types/webpack-dev-server': registry.nlark.com/@types/webpack-dev-server/3.11.6
       '@vue/cli-overlay': registry.nlark.com/@vue/cli-overlay/4.5.13
       '@vue/cli-plugin-router': registry.nlark.com/@vue/cli-plugin-router/4.5.13_@vue+cli-service@4.5.13
       '@vue/cli-plugin-vuex': registry.nlark.com/@vue/cli-plugin-vuex/4.5.13_@vue+cli-service@4.5.13
@@ -2919,6 +2950,14 @@ packages:
     name: aws4
     version: 1.11.0
     dev: true
+
+  registry.nlark.com/axios/0.21.4:
+    resolution: {integrity: sha1-xnuQ3AVo5cHPKwuFjEO6KOLtpXU=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/axios/download/axios-0.21.4.tgz}
+    name: axios
+    version: 0.21.4
+    dependencies:
+      follow-redirects: registry.nlark.com/follow-redirects/1.14.4
+    dev: false
 
   registry.nlark.com/babel-eslint/10.1.0_eslint@6.8.0:
     resolution: {integrity: sha1-aWjlaKkQt4+zd5zdi2rC9HmUMjI=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/babel-eslint/download/babel-eslint-10.1.0.tgz}
@@ -5494,20 +5533,11 @@ packages:
       readable-stream: registry.nlark.com/readable-stream/2.3.7
     dev: true
 
-  registry.nlark.com/follow-redirects/1.14.4_debug@4.3.2:
+  registry.nlark.com/follow-redirects/1.14.4:
     resolution: {integrity: sha1-g4/fSKi73XnlLuUfsclOPtmLk3k=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/follow-redirects/download/follow-redirects-1.14.4.tgz}
-    id: registry.nlark.com/follow-redirects/1.14.4
     name: follow-redirects
     version: 1.14.4
     engines: {node: '>=4.0'}
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
-    dependencies:
-      debug: registry.nlark.com/debug/4.3.2
-    dev: true
 
   registry.nlark.com/for-in/1.0.2:
     resolution: {integrity: sha1-gQaNKVqBQuwKxybG4iAMMPttXoA=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/for-in/download/for-in-1.0.2.tgz}
@@ -6117,49 +6147,40 @@ packages:
     version: 0.5.3
     dev: true
 
-  registry.nlark.com/http-proxy-middleware/0.19.1_debug@4.3.2:
+  registry.nlark.com/http-proxy-middleware/0.19.1:
     resolution: {integrity: sha1-GDx9xKoUeRUDBkmMIQza+WCApDo=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/http-proxy-middleware/download/http-proxy-middleware-0.19.1.tgz}
-    id: registry.nlark.com/http-proxy-middleware/0.19.1
     name: http-proxy-middleware
     version: 0.19.1
     engines: {node: '>=4.0.0'}
     dependencies:
-      http-proxy: registry.nlark.com/http-proxy/1.18.1_debug@4.3.2
+      http-proxy: registry.nlark.com/http-proxy/1.18.1
       is-glob: registry.npmmirror.com/is-glob/4.0.2
       lodash: registry.nlark.com/lodash/4.17.21
       micromatch: registry.nlark.com/micromatch/3.1.10
-    transitivePeerDependencies:
-      - debug
     dev: true
 
-  registry.nlark.com/http-proxy-middleware/1.3.1_debug@4.3.2:
+  registry.nlark.com/http-proxy-middleware/1.3.1:
     resolution: {integrity: sha1-Q3ANbZ7st0Gb8IahKND3IF2etmU=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/http-proxy-middleware/download/http-proxy-middleware-1.3.1.tgz}
-    id: registry.nlark.com/http-proxy-middleware/1.3.1
     name: http-proxy-middleware
     version: 1.3.1
     engines: {node: '>=8.0.0'}
     dependencies:
       '@types/http-proxy': registry.nlark.com/@types/http-proxy/1.17.7
-      http-proxy: registry.nlark.com/http-proxy/1.18.1_debug@4.3.2
+      http-proxy: registry.nlark.com/http-proxy/1.18.1
       is-glob: registry.npmmirror.com/is-glob/4.0.2
       is-plain-obj: registry.nlark.com/is-plain-obj/3.0.0
       micromatch: registry.nlark.com/micromatch/4.0.4
-    transitivePeerDependencies:
-      - debug
     dev: true
 
-  registry.nlark.com/http-proxy/1.18.1_debug@4.3.2:
+  registry.nlark.com/http-proxy/1.18.1:
     resolution: {integrity: sha1-QBVB8FNIhLv5UmAzTnL4juOXZUk=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/http-proxy/download/http-proxy-1.18.1.tgz}
-    id: registry.nlark.com/http-proxy/1.18.1
     name: http-proxy
     version: 1.18.1
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: registry.nlark.com/eventemitter3/4.0.7
-      follow-redirects: registry.nlark.com/follow-redirects/1.14.4_debug@4.3.2
+      follow-redirects: registry.nlark.com/follow-redirects/1.14.4
       requires-port: registry.nlark.com/requires-port/1.0.0
-    transitivePeerDependencies:
-      - debug
     dev: true
 
   registry.nlark.com/http-signature/1.2.0:
@@ -9781,6 +9802,12 @@ packages:
       is-plain-obj: registry.nlark.com/is-plain-obj/1.1.0
     dev: true
 
+  registry.nlark.com/sortablejs/1.14.0:
+    resolution: {integrity: sha1-bS4XzL2yX0ZHNN9iHU811Ks1s9g=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/sortablejs/download/sortablejs-1.14.0.tgz}
+    name: sortablejs
+    version: 1.14.0
+    dev: false
+
   registry.nlark.com/source-list-map/2.0.1:
     resolution: {integrity: sha1-OZO9hzv8SEecyp6jpUeDXHwVSzQ=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/source-list-map/download/source-list-map-2.0.1.tgz}
     name: source-list-map
@@ -10750,6 +10777,9 @@ packages:
     peerDependencies:
       '@vue/composition-api': ^1.0.0-rc.1
       vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
     dependencies:
       vue: registry.npmmirror.com/vue/3.2.19
     dev: false
@@ -10795,6 +10825,18 @@ packages:
     name: vue-template-es2015-compiler
     version: 1.9.1
     dev: true
+
+  registry.nlark.com/vuedraggable/4.1.0_vue@3.2.19:
+    resolution: {integrity: sha1-7ezmituKTZ4GrM/538kEDmaFInA=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/vuedraggable/download/vuedraggable-4.1.0.tgz}
+    id: registry.nlark.com/vuedraggable/4.1.0
+    name: vuedraggable
+    version: 4.1.0
+    peerDependencies:
+      vue: ^3.0.1
+    dependencies:
+      sortablejs: registry.nlark.com/sortablejs/1.14.0
+      vue: registry.npmmirror.com/vue/3.2.19
+    dev: false
 
   registry.nlark.com/watchpack-chokidar2/2.0.1:
     resolution: {integrity: sha1-OFAAcu5uzmbzdpk2lQ6hdxvhyVc=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/watchpack-chokidar2/download/watchpack-chokidar2-2.0.1.tgz}
@@ -11217,6 +11259,11 @@ packages:
     peerDependencies:
       '@vue/composition-api': ^1.1.0
       vue: ^2.6.0 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      vue:
+        optional: true
     dependencies:
       '@vueuse/shared': registry.npmmirror.com/@vueuse/shared/6.1.0_vue@3.2.19
       vue: registry.npmmirror.com/vue/3.2.19
@@ -11231,6 +11278,11 @@ packages:
     peerDependencies:
       '@vue/composition-api': ^1.1.0
       vue: ^2.6.0 || ^3.2.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+      vue:
+        optional: true
     dependencies:
       vue: registry.npmmirror.com/vue/3.2.19
       vue-demi: registry.nlark.com/vue-demi/0.11.4_vue@3.2.19
@@ -11732,7 +11784,7 @@ packages:
       del: registry.nlark.com/del/4.1.1
       express: registry.nlark.com/express/4.17.1
       html-entities: registry.nlark.com/html-entities/1.4.0
-      http-proxy-middleware: registry.nlark.com/http-proxy-middleware/0.19.1_debug@4.3.2
+      http-proxy-middleware: registry.nlark.com/http-proxy-middleware/0.19.1
       import-local: registry.nlark.com/import-local/2.0.0
       internal-ip: registry.nlark.com/internal-ip/4.3.0
       ip: registry.nlark.com/ip/1.1.5

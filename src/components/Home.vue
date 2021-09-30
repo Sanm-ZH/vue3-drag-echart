@@ -13,9 +13,7 @@
           <el-button type="primary" size="small" :disabled="addBStatus" icon="el-icon-plus" @click="handleAddClick">新增</el-button>
         </div>
       </div>
-      <div class="main-cont">
-
-      </div>
+      <OverView ref="overViewRef"></OverView>
     </div>
   </transition>
   <el-dialog v-model="addDialogFormVisible" title="新增图表" :show-close=false custom-class="self-dialog" :close-on-click-modal=false width="550px">
@@ -26,10 +24,12 @@
 <script>
 import { ref, toRefs, reactive, defineComponent } from 'vue'
 import AddForm from '@/components/AddForm.vue'
+import OverView from '@/components/OverView.vue'
 
 export default defineComponent({
   components: {
-    AddForm
+    AddForm,
+    OverView
   },
   props: {
     msg: String
@@ -44,7 +44,8 @@ export default defineComponent({
       editBStatus: false,
       confirmBStatus: true,
       addBStatus: false,
-      addDialogFormVisible: false
+      addDialogFormVisible: false,
+      addFormData: null
     })
 
     const handleEditClick = () => {
@@ -67,13 +68,16 @@ export default defineComponent({
       }
     }
 
+    const overViewRef = ref(null)
+
     return {
       titleShow,
       ...toRefs(state),
       handleEditClick,
       handleConfirmClick,
       handleAddClick,
-      addFormListenHandle
+      addFormListenHandle,
+      overViewRef
     }
   }
 })
