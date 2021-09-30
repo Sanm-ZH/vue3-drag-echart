@@ -1,6 +1,6 @@
 <template>
   <div v-for="(item, index) in colorList" :key="`colorList-${index}`" class="color-list">
-    <el-color-picker v-model="item.color" size="small" :show-alpha='item.showalpha'></el-color-picker>
+    <el-color-picker v-model="item.color" size="small" :show-alpha='item.showalpha' @change="handleColorsChange"></el-color-picker>
   </div>
 </template>
 
@@ -52,7 +52,7 @@ export default defineComponent({
     })
 
     const handleColorsChange = () => {
-
+      emit('colorChange', state.colorList)
     }
 
     return {
