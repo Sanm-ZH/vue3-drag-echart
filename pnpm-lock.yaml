@@ -17,6 +17,7 @@ specifiers:
   eslint-plugin-promise: ^4.2.1
   eslint-plugin-standard: ^4.0.0
   eslint-plugin-vue: ^7.0.0
+  gh-pages: ^3.2.3
   mockjs: ^1.1.0
   sass: ^1.26.5
   sass-loader: ^8.0.2
@@ -47,6 +48,7 @@ devDependencies:
   eslint-plugin-promise: registry.nlark.com/eslint-plugin-promise/4.3.1
   eslint-plugin-standard: registry.nlark.com/eslint-plugin-standard/4.1.0_eslint@6.8.0
   eslint-plugin-vue: registry.nlark.com/eslint-plugin-vue/7.18.0_eslint@6.8.0
+  gh-pages: registry.npmmirror.com/gh-pages/3.2.3
   sass: registry.npmmirror.com/sass/1.42.1
   sass-loader: registry.nlark.com/sass-loader/8.0.2_sass@1.42.1
 
@@ -4695,6 +4697,12 @@ packages:
       minimalistic-crypto-utils: registry.nlark.com/minimalistic-crypto-utils/1.0.1
     dev: true
 
+  registry.nlark.com/email-addresses/3.1.0:
+    resolution: {integrity: sha1-yr9+CFy9tjAIpwMZp05hNhiIEvs=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/email-addresses/download/email-addresses-3.1.0.tgz}
+    name: email-addresses
+    version: 3.1.0
+    dev: true
+
   registry.nlark.com/emoji-regex/7.0.3:
     resolution: {integrity: sha1-kzoEBShgyF6DwSJHnEdIqOTHIVY=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/emoji-regex/download/emoji-regex-7.0.3.tgz}
     name: emoji-regex
@@ -5426,6 +5434,24 @@ packages:
       webpack: registry.npmmirror.com/webpack/4.46.0
     dev: true
 
+  registry.nlark.com/filename-reserved-regex/2.0.0:
+    resolution: {integrity: sha1-q/c9+rc10EVECr/qLZHzieu/oik=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/filename-reserved-regex/download/filename-reserved-regex-2.0.0.tgz}
+    name: filename-reserved-regex
+    version: 2.0.0
+    engines: {node: '>=4'}
+    dev: true
+
+  registry.nlark.com/filenamify/4.3.0:
+    resolution: {integrity: sha1-YjkctY8CsJlxydT51js8+augMQY=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/filenamify/download/filenamify-4.3.0.tgz}
+    name: filenamify
+    version: 4.3.0
+    engines: {node: '>=8'}
+    dependencies:
+      filename-reserved-regex: registry.nlark.com/filename-reserved-regex/2.0.0
+      strip-outer: registry.nlark.com/strip-outer/1.0.1
+      trim-repeated: registry.nlark.com/trim-repeated/1.0.0
+    dev: true
+
   registry.nlark.com/filesize/3.6.1:
     resolution: {integrity: sha1-CQuz7gG2+AGoqL6Z0xcQs0Irsxc=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/filesize/download/filesize-3.6.1.tgz}
     name: filesize
@@ -5498,7 +5524,7 @@ packages:
     dependencies:
       commondir: registry.nlark.com/commondir/1.0.1
       make-dir: registry.nlark.com/make-dir/3.1.0
-      pkg-dir: registry.nlark.com/pkg-dir/4.2.0
+      pkg-dir: registry.npmmirror.com/pkg-dir/4.2.0
     dev: true
 
   registry.nlark.com/find-root/1.1.0:
@@ -5592,6 +5618,17 @@ packages:
     resolution: {integrity: sha1-TxicRKoSO4lfcigE9V6iPq3DSOk=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/fs-extra/download/fs-extra-7.0.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ffs-extra%2Fdownload%2Ffs-extra-7.0.1.tgz}
     name: fs-extra
     version: 7.0.1
+    engines: {node: '>=6 <7 || >=8'}
+    dependencies:
+      graceful-fs: registry.nlark.com/graceful-fs/4.2.8
+      jsonfile: registry.nlark.com/jsonfile/4.0.0
+      universalify: registry.nlark.com/universalify/0.1.2
+    dev: true
+
+  registry.nlark.com/fs-extra/8.1.0:
+    resolution: {integrity: sha1-SdQ8RaiM2Wd2aMt74bRu/bjS4cA=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/fs-extra/download/fs-extra-8.1.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ffs-extra%2Fdownload%2Ffs-extra-8.1.0.tgz}
+    name: fs-extra
+    version: 8.1.0
     engines: {node: '>=6 <7 || >=8'}
     dependencies:
       graceful-fs: registry.nlark.com/graceful-fs/4.2.8
@@ -8057,7 +8094,7 @@ packages:
     version: 2.3.0
     engines: {node: '>=6'}
     dependencies:
-      p-try: registry.nlark.com/p-try/2.2.0
+      p-try: registry.npmmirror.com/p-try/2.2.0
     dev: true
 
   registry.nlark.com/p-locate/2.0.0:
@@ -8108,13 +8145,6 @@ packages:
     name: p-try
     version: 1.0.0
     engines: {node: '>=4'}
-    dev: true
-
-  registry.nlark.com/p-try/2.2.0:
-    resolution: {integrity: sha1-yyhoVA4xPWHeWPr741zpAE1VQOY=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/p-try/download/p-try-2.2.0.tgz}
-    name: p-try
-    version: 2.2.0
-    engines: {node: '>=6'}
     dev: true
 
   registry.nlark.com/pako/1.0.11:
@@ -8381,15 +8411,6 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       find-up: registry.npmmirror.com/find-up/3.0.0
-    dev: true
-
-  registry.nlark.com/pkg-dir/4.2.0:
-    resolution: {integrity: sha1-8JkTPfft5CLoHR2ESCcO6z5CYfM=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/pkg-dir/download/pkg-dir-4.2.0.tgz}
-    name: pkg-dir
-    version: 4.2.0
-    engines: {node: '>=8'}
-    dependencies:
-      find-up: registry.npmmirror.com/find-up/4.1.0
     dev: true
 
   registry.nlark.com/pkg-up/2.0.0:
@@ -10125,6 +10146,15 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  registry.nlark.com/strip-outer/1.0.1:
+    resolution: {integrity: sha1-sv0qv2YEudHmATBXGV34Nrip1jE=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/strip-outer/download/strip-outer-1.0.1.tgz}
+    name: strip-outer
+    version: 1.0.1
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      escape-string-regexp: registry.nlark.com/escape-string-regexp/1.0.5
+    dev: true
+
   registry.nlark.com/stylehacks/4.0.3:
     resolution: {integrity: sha1-Zxj8r00eB9ihMYaQiB6NlnJqcdU=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/stylehacks/download/stylehacks-4.0.3.tgz}
     name: stylehacks
@@ -10377,6 +10407,15 @@ packages:
     dependencies:
       psl: registry.nlark.com/psl/1.8.0
       punycode: registry.nlark.com/punycode/2.1.1
+    dev: true
+
+  registry.nlark.com/trim-repeated/1.0.0:
+    resolution: {integrity: sha1-42RqLqTokTEr9+rObPsFOAvAHCE=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/trim-repeated/download/trim-repeated-1.0.0.tgz}
+    name: trim-repeated
+    version: 1.0.0
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      escape-string-regexp: registry.nlark.com/escape-string-regexp/1.0.5
     dev: true
 
   registry.nlark.com/tryer/1.0.1:
@@ -11470,6 +11509,22 @@ packages:
       path-exists: registry.nlark.com/path-exists/4.0.0
     dev: true
 
+  registry.npmmirror.com/gh-pages/3.2.3:
+    resolution: {integrity: sha1-iX5fFeER9Cr1fSHUMLg+XN8pRyw=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/gh-pages/download/gh-pages-3.2.3.tgz}
+    name: gh-pages
+    version: 3.2.3
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      async: registry.nlark.com/async/2.6.3
+      commander: registry.nlark.com/commander/2.20.3
+      email-addresses: registry.nlark.com/email-addresses/3.1.0
+      filenamify: registry.nlark.com/filenamify/4.3.0
+      find-cache-dir: registry.nlark.com/find-cache-dir/3.3.2
+      fs-extra: registry.nlark.com/fs-extra/8.1.0
+      globby: registry.nlark.com/globby/6.1.0
+    dev: true
+
   registry.npmmirror.com/glob/7.2.0:
     resolution: {integrity: sha1-0VU1r3cy4C6Uj0xBYovZECk/YCM=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/glob/download/glob-7.2.0.tgz}
     name: glob
@@ -11523,6 +11578,22 @@ packages:
     name: normalize-wheel-es
     version: 1.1.0
     dev: false
+
+  registry.npmmirror.com/p-try/2.2.0:
+    resolution: {integrity: sha1-yyhoVA4xPWHeWPr741zpAE1VQOY=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/p-try/download/p-try-2.2.0.tgz}
+    name: p-try
+    version: 2.2.0
+    engines: {node: '>=6'}
+    dev: true
+
+  registry.npmmirror.com/pkg-dir/4.2.0:
+    resolution: {integrity: sha1-8JkTPfft5CLoHR2ESCcO6z5CYfM=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/pkg-dir/download/pkg-dir-4.2.0.tgz}
+    name: pkg-dir
+    version: 4.2.0
+    engines: {node: '>=8'}
+    dependencies:
+      find-up: registry.npmmirror.com/find-up/4.1.0
+    dev: true
 
   registry.npmmirror.com/postcss/7.0.38:
     resolution: {integrity: sha1-U2WpxRJmQ9l3BGrSOfYOrdokkdY=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/postcss/download/postcss-7.0.38.tgz}
